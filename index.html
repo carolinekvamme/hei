@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <title>Hei</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div id="intro">
+            <h1>Hei</h1>
+            <p>Kanskje du sitter å kjeder deg? Da foreslår jeg at du skal trykke på knappen under!</p>
+            <button id="snap">Trykk på meg!</button>
+        </div>
+        <p id="opne"></p>
+        <button id="knapp"></button>
+        <button id="knapp11"></button>
+        <button id="knapp12"></button>
+        <button id="knapp21"></button>
+        <button id="knapp22"></button>
+        <button id="knapp31"></button>
+        <button id="knapp32"></button>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        var intro = document.getElementById("intro");
+        var opne = document.getElementById("opne");
+        var knapp = document.getElementById("knapp"); 
+        var knapp11 = document.getElementById("knapp11"); 
+        var knapp12 = document.getElementById("knapp12"); 
+        var knapp21 = document.getElementById("knapp21"); 
+        var knapp22 = document.getElementById("knapp22"); 
+        var knapp31 = document.getElementById("knapp31"); 
+        var knapp32 = document.getElementById("knapp32"); 
+
+        knapp.style.display = "none";
+        knapp11.style.display = "none";
+        knapp12.style.display = "none";
+        knapp21.style.display = "none";
+        knapp22.style.display = "none";
+        knapp31.style.display = "none";
+        knapp32.style.display = "none";
+        
+        function snapMeg() {
+            intro.innerHTML = "";
+            opne.innerHTML =  `
+                <p>Svar så godt du kan på disse to spørsmålene, og jeg gir det et tips i hva du burde gjøre </p>
+            `;
+            knapp.innerHTML = "Start test";
+            knapp.style.display = "inline";
+            
+        }
+
+        function spor1() { //spørsmål 1
+            intro.innerHTML = "";
+            opne.innerHTML = `
+                <p>Synes du ironi er morsomt?</p>
+            `;
+            knapp11.innerHTML = "Ja";
+            knapp12.innerHTML = "Eeeh, ja"
+            knapp11.style.display = "inline";
+            knapp12.style.display = "inline";
+            knapp.style.display = "none";
+
+        }
+
+        function spor2() { //spørsmål 2
+            intro.innerHTML = "";
+            opne.innerHTML = `
+                <p>Synes du kyllingvinger er godt?</p>
+            `;
+            knapp21.innerHTML = "Selvfølgelig";
+            knapp22.innerHTML = "Hundre prosent!";
+            knapp22.style.display = "inline";
+            knapp21.style.display = "inline";
+            knapp.style.display = "none";
+            knapp11.style.display = "none";
+            knapp12.style.display = "none";
+
+        }
+        function spor3() { //spørsmål 3
+            intro.innerHTML = "";
+            opne.innerHTML = `
+                <p>Latinaer er kule?</p>
+            `;
+            knapp31.innerHTML = "Nei";
+            knapp32.innerHTML = "Æsj"
+
+            knapp31.style.display = "inline";
+            knapp32.style.display = "inline";
+            knapp22.style.display = "none";
+            knapp21.style.display = "none";
+            knapp.style.display = "none";
+            knapp11.style.display = "none";
+            knapp12.style.display = "none";
+
+        }
+        
+        function snapURL() {
+            intro.innerHTML = "";
+            opne.innerHTML = `
+                <p>
+                Svarene dine gjør at det eneste fornuftige er å adde meg på 
+                <a href="http://www.snapchat.com/add/caroek02" target="_blank">snap</a>
+                </p>
+                
+            `;
+
+            knapp.style.display = "none";
+            knapp11.style.display = "none";
+            knapp12.style.display = "none";
+            knapp21.style.display = "none";
+            knapp22.style.display = "none";
+            knapp31.style.display = "none";
+            knapp32.style.display = "none";
+        }
+
+        snap.onclick = snapMeg; 
+        knapp.onclick = spor1;
+        knapp11.onclick = spor2;
+        knapp12.onclick = spor2;
+        knapp21.onclick = spor3;
+        knapp22.onclick = spor3;
+        knapp31.onclick = snapURL;
+        knapp32.onclick = snapURL; 
+        
+    </script>
+    
+</body>
+</html>
