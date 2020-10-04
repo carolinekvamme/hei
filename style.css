@@ -101,4 +101,7 @@ button{
     #knapp21, #knapp22{
       font-size: 1rem;
     }
+    p{
+      padding-top: 3%; 
+    }
   }
