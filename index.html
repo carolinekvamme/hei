@@ -14,11 +14,10 @@
     <main>
         <div id="intro">
             <h1>Hei</h1>
-            <p>Kanskje du sitter og kjeder deg? Da foreslår jeg at du skal trykke på knappen under!</p>
-            <button id="snap">Trykk på meg!</button>
+            <p>Quiz</p>
+            <button id="knapp">Start test</button>
         </div>
         <p id="opne"></p>
-        <button id="knapp"></button>
         <button id="knapp11"></button>
         <button id="knapp12"></button>
         <button id="knapp21"></button>
@@ -40,7 +39,6 @@
         var knapp31 = document.getElementById("knapp31"); 
         var knapp32 = document.getElementById("knapp32"); 
 
-        knapp.style.display = "none";
         knapp11.style.display = "none";
         knapp12.style.display = "none";
         knapp21.style.display = "none";
@@ -48,15 +46,6 @@
         knapp31.style.display = "none";
         knapp32.style.display = "none";
         
-        function snapMeg() {
-            intro.innerHTML = "";
-            opne.innerHTML =  `
-                <p>Svar så godt du kan på disse to spørsmålene, og jeg gir det et tips i hva du burde gjøre </p>
-            `;
-            knapp.innerHTML = "Start test";
-            knapp.style.display = "inline";
-            
-        }
 
         function spor1() { //spørsmål 1
             intro.innerHTML = "";
@@ -122,7 +111,6 @@
             knapp32.style.display = "none";
         }
 
-        snap.onclick = snapMeg; 
         knapp.onclick = spor1;
         knapp11.onclick = spor2;
         knapp12.onclick = spor2;
